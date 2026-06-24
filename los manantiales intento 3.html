@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reserva Hídrica Los Manantiales - Río Ceballos</title>
+
+<style>
+:root{
+--verde-claro:#dff5e1;
+--verde-agua:#0f766e;
+--verde-oscuro:#0b4f4a;
+--blanco:#ffffff;
+--texto:#23403b;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--verde-claro);
+color:var(--texto);
+line-height:1.7;
+}
+
+header{
+background:linear-gradient(135deg,var(--verde-agua),var(--verde-oscuro));
+color:white;
+padding:20px;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,.2);
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+max-width:1200px;
+margin:auto;
+}
+
+.logo{
+font-size:1.3rem;
+font-weight:bold;
+}
+
+.menu-btn{
+font-size:2rem;
+cursor:pointer;
+user-select:none;
+}
+
+nav{
+position:fixed;
+top:0;
+right:-100%;
+width:300px;
+height:100vh;
+background:white;
+transition:.4s;
+padding-top:100px;
+box-shadow:-5px 0 20px rgba(0,0,0,.2);
+}
+
+nav.active{
+right:0;
+}
+
+nav a{
+display:block;
+padding:18px 30px;
+text-decoration:none;
+color:var(--verde-oscuro);
+font-weight:600;
+transition:.3s;
+}
+
+nav a:hover{
+background:var(--verde-claro);
+padding-left:40px;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:120px 20px 50px;
+background:
+linear-gradient(rgba(15,118,110,.75),rgba(11,79,74,.8)),
+url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e");
+background-size:cover;
+background-position:center;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+}
+
+section{
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+h2{
+color:var(--verde-oscuro);
+margin-bottom:20px;
+font-size:2rem;
+border-left:8px solid var(--verde-agua);
+padding-left:15px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+color:var(--verde-agua);
+margin-bottom:10px;
+}
+
+.fuentes a{
+display:block;
+margin:10px 0;
+color:var(--verde-oscuro);
+font-weight:600;
+text-decoration:none;
+}
+
+.fuentes a:hover{
+text-decoration:underline;
+}
+
+footer{
+background:var(--verde-oscuro);
+color:white;
+text-align:center;
+padding:35px 20px;
+margin-top:40px;
+}
+
+.creditos{
+font-size:.95rem;
+opacity:.9;
+}
+
+@media(max-width:768px){
+.hero h1{
+font-size:2.2rem;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<div class="navbar">
+<div class="logo">🌿 Los Manantiales</div>
+<div class="menu-btn" id="menuBtn">☰</div>
+</div>
+</header>
+
+<nav id="menu">
+<a href="#inicio">Inicio</a>
+<a href="#reserva">La Reserva</a>
+<a href="#biodiversidad">Biodiversidad</a>
+<a href="#importancia">Importancia</a>
+<a href="#quienes">Quiénes Somos</a>
+<a href="#galeria">Galería</a>
+<a href="#fuentes">Fuentes</a>
+</nav>
+
+<section class="hero" id="inicio">
+<div class="hero-content">
+<h1>Reserva Hídrica Natural Municipal Los Manantiales</h1>
+<p>
+Un espacio natural protegido de gran valor ambiental ubicado en Río Ceballos,
+provincia de Córdoba. Su conservación contribuye al cuidado del bosque nativo,
+los cursos de agua y la biodiversidad característica de las Sierras Chicas.
+</p>
+</div>
+</section>
+
+<section id="reserva">
+<h2>La Reserva</h2>
+
+<p>
+La Reserva Hídrica Natural Municipal Los Manantiales fue creada para proteger la
+cuenca del arroyo Mal Paso, afluente del Río Ceballos. Esta área forma parte de
+un importante corredor biológico de las Sierras Chicas y permite conservar
+ecosistemas nativos fundamentales para el equilibrio ambiental de la región.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>📍 Ubicación</h3>
+<p>
+Se encuentra en la ciudad de Río Ceballos, departamento Colón, provincia de Córdoba.
+</p>
+</div>
+
+<div class="card">
+<h3>💧 Recursos Hídricos</h3>
+<p>
+Protege la cuenca del arroyo Mal Paso, contribuyendo a la preservación de la calidad
+y disponibilidad del agua.
+</p>
+</div>
+
+<div class="card">
+<h3>🥾 Turismo Responsable</h3>
+<p>
+Cuenta con senderos para caminatas, observación de aves, fotografía de naturaleza
+y actividades recreativas de bajo impacto.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="biodiversidad">
+<h2>Biodiversidad y Patrimonio Natural</h2>
+
+<p>
+La reserva conserva sectores representativos del bosque chaqueño serrano,
+ecosistema característico de las Sierras Chicas. En este ambiente habitan aves,
+mamíferos, reptiles e innumerables especies vegetales adaptadas a las condiciones
+climáticas de la región.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌳 Bosque Nativo</h3>
+<p>
+Protege especies vegetales propias del ecosistema serrano y contribuye a la
+recuperación ambiental del territorio.
+</p>
+</div>
+
+<div class="card">
+<h3>🦉 Fauna</h3>
+<p>
+La observación de aves constituye una de las actividades más destacadas para
+visitantes y especialistas.
+</p>
+</div>
+
+<div class="card">
+<h3>🪨 Las Pisaditas</h3>
+<p>
+Una formación geológica natural modelada por procesos erosivos que ofrece
+vistas panorámicas y valor educativo.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="importancia">
+<h2>Importancia Ambiental</h2>
+
+<p>
+Los Manantiales representa una de las principales áreas naturales protegidas de
+Río Ceballos. Además de conservar flora y fauna, ayuda a prevenir procesos de
+degradación ambiental, protege cuencas hídricas y promueve la educación
+ambiental en la comunidad.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌎 Conservación</h3>
+<p>
+Favorece la protección de ecosistemas naturales y corredores biológicos.
+</p>
+</div>
+
+<div class="card">
+<h3>📚 Educación Ambiental</h3>
+<p>
+Funciona como espacio de aprendizaje para estudiantes, investigadores y visitantes.
+</p>
+</div>
+
+<div class="card">
+<h3>🏞️ Recreación Sustentable</h3>
+<p>
+Permite disfrutar de la naturaleza promoviendo el respeto y cuidado del ambiente.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="quienes">
+<h2>Quiénes Somos</h2>
+
+<p>
+Este proyecto fue desarrollado con fines educativos por estudiantes de
+<strong>2° Año "B" Turno Tarde</strong> del
+<strong>IPEM N.º 144 "Mariano Moreno"</strong>, de la ciudad de Río Ceballos.
+</p>
+
+<br>
+
+<p>
+Nuestro objetivo es promover el conocimiento y la valoración del patrimonio
+natural local, destacando la importancia de la Reserva Hídrica Natural Municipal
+Los Manantiales como un espacio fundamental para la conservación ambiental, la
+educación y el desarrollo sustentable de nuestra comunidad.
+</p>
+</section>
+
+<section id="galeria">
+<h2>Galería Fotográfica</h2>
+
+<p>
+Para complementar la información presentada en este proyecto, se encuentra
+disponible una colección de fotografías y material visual relacionado con la
+Reserva Hídrica Natural Municipal Los Manantiales.
+</p>
+
+<div class="cards">
+<div class="card">
+<h3>📸 Ver Galería</h3>
+
+<p>
+Hacé clic en el siguiente botón para acceder a la carpeta con imágenes,
+fotografías y recursos utilizados en este proyecto.
+</p>
+
+<br>
+
+<a href="https://drive.google.com/drive/folders/1oPUw6S1Btshsjf5Dpe_O4QTT9xxNyGMY?usp=drive_link"
+target="_blank"
+style="
+display:inline-block;
+background:#0f766e;
+color:white;
+padding:15px 25px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+">
+Abrir carpeta de imágenes </a>
+
+</div>
+</div>
+</section>
+
+<section id="fuentes">
+<h2>Fuentes de Información</h2>
+
+<div class="fuentes">
+
+<a href="https://rioceballos.tur.ar/camino-central-reserva-los-manantiales/" target="_blank">
+Turismo Río Ceballos – Reserva Los Manantiales
+</a>
+
+<a href="https://rioceballos.tur.ar/sitios/arroyo-mal-paso/" target="_blank">
+Turismo Río Ceballos – Arroyo Mal Paso
+</a>
+
+<a href="https://rioceballos.tur.ar/sitios/las-pisaditas/" target="_blank">
+Turismo Río Ceballos – Las Pisaditas
+</a>
+
+<a href="https://www.avesargentinas.org.ar/reserva-urbana/reserva-h%C3%ADdrica-natural-municipal-los-manantiales" target="_blank">
+Aves Argentinas – Reserva Hídrica Natural Municipal Los Manantiales
+</a>
+
+<a href="https://cordobaturismo.gov.ar/localidades/rio-ceballos/" target="_blank">
+Agencia Córdoba Turismo – Río Ceballos
+</a>
+
+<a href="https://cordobaturismo.gov.ar/experiencias/rio-ceballos-reserva-los-manantiales/" target="_blank">
+Agencia Córdoba Turismo – Reserva Los Manantiales
+</a>
+
+<a href="https://sib.gob.ar/areas-protegidas/reserva-hidrica-municipal-los-manantiales-cordoba" target="_blank">
+Sistema de Información de Biodiversidad (Parques Nacionales)
+</a>
+
+</div>
+</section>
+
+<footer>
+<h3>🌿 Reserva Hídrica Los Manantiales</h3>
+<br>
+<p class="creditos">
+Proyecto educativo realizado por estudiantes de 2° Año "B" – Turno Tarde<br>
+IPEM N.º 144 "Mariano Moreno" – Río Ceballos, Córdoba, Argentina.
+</p>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const menu = document.getElementById("menu");
+
+menuBtn.addEventListener("click", () => {
+menu.classList.toggle("active");
+
+if(menu.classList.contains("active")){
+menuBtn.innerHTML = "✕";
+}else{
+menuBtn.innerHTML = "☰";
+}
+});
+
+document.querySelectorAll("nav a").forEach(link=>{
+link.addEventListener("click",()=>{
+menu.classList.remove("active");
+menuBtn.innerHTML="☰";
+});
+});
+</script>
+
+</body>
+</html>
